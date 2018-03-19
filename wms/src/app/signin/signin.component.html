@@ -1,0 +1,60 @@
+<div class="container" fxLayout="column" fxLayoutGap="10px">
+
+  <div fxFlex>
+    <div>
+      <h3>Sign in</h3>
+      <hr>
+    </div>
+  </div>
+  <div *ngIf="errMess">
+        <h2>Error</h2>
+        <h4>{{errMess}}</h4>
+  </div>
+  <div fxFlex class="form-size">
+        <form novalidate [formGroup]="signinForm" (ngSubmit)="onSubmit()">
+            <p>
+            <md-input-container class="full-width" dividerColor="{{(formErrors.username) ? 'warn' : 'primary'}}">
+                <input mdInput formControlName="username" placeholder="User Name" type="text" required>
+                <md-hint>
+                <span [hidden]="!(formErrors.username)">{{formErrors.username}}</span>
+                </md-hint>
+            </md-input-container>
+            </p>
+            <p>
+            <md-input-container class="full-width" dividerColor="{{(formErrors.password) ? 'warn' : 'primary'}}">
+                <input mdInput formControlName="password" placeholder="Password" type="text" required>
+                <md-hint>
+                <span [hidden]="!(formErrors.password)">{{formErrors.password}}</span>
+                </md-hint>
+            </md-input-container>
+            </p>
+            <p>
+            <md-input-container class="full-width" dividerColor="{{(formErrors.email) ? 'warn' : 'primary'}}">
+                <input mdInput formControlName="email" placeholder="Email" type="text" required>
+                <md-hint>
+                <span [hidden]="!(formErrors.email)">{{formErrors.email}}</span>
+                </md-hint>
+            </md-input-container>
+            </p>
+            <p>
+            <md-input-container class="full-width" dividerColor="{{(formErrors.mobile) ? 'warn' : 'primary'}}">
+                <input mdInput formControlName="mobile" placeholder="Mobile" type="text" required>
+                <md-hint>
+                <span [hidden]="!(formErrors.mobile)">{{formErrors.mobile}}</span>
+                </md-hint>
+            </md-input-container>
+            </p>
+            <p>
+            <md-input-container class="full-width" dividerColor="{{(formErrors.workplace) ? 'warn' : 'primary'}}">
+                <input mdInput formControlName="workplace" placeholder="Workplace" type="text" required>
+                <md-hint>
+                <span [hidden]="!(formErrors.workplace)">{{formErrors.workplace}}</span>
+                </md-hint>
+            </md-input-container>
+            </p>
+            <p>
+                <button type="submit" md-button class="background-primary text-floral-white" [disabled]="signinForm.invalid">Submit</button>
+            </p>
+        </form>
+    </div>
+</div>

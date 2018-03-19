@@ -1,0 +1,73 @@
+<div class="container"
+     fxLayout="column"
+     fxLayoutGap="10px">
+     <div fxFlex>
+            <div>
+               <h3> Contact Us </h3>
+               <hr>
+            </div>
+     </div>
+    <div fxFlex>
+      <div fxLayout="column" fxLayout.gt-sm="row">
+          <div fxFlex="50" fxFlexOffset="20px">
+                <div>
+                    <a md-raised-button href="tel:+966114800555"><i class="fa fa-phone"></i> Call </a>
+                    <a md-raised-button href="mailto:abegs@abegs.org"><i class="fa fa-envelope-o"></i> Email</a>
+                </div>
+            </div>
+        </div>
+      </div>
+    
+      <div fxFlex fxFlexOffset="20px" class="form-size" [hidden]="submitfeedback">
+        <h3>Your message </h3>
+        <form novalidate [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
+          <p>
+            <md-input-container class="half-width"
+             dividerColor="{{(feedbackForm.get('firstname').hasError('required') && feedbackForm.get('firstname').touched) ? 'warn' : 'primary'}}">
+              <input mdInput formControlName="firstname" placeholder="First Name" type="text" required>
+              <md-hint>
+                <span [hidden]="!(feedbackForm.get('firstname').hasError('required') && feedbackForm.get('firstname').touched)">
+                    Name is required </span>
+              </md-hint>
+            </md-input-container>
+            <md-input-container class="half-width"
+             dividerColor="{{(feedbackForm.get('lastname').hasError('required') && feedbackForm.get('lastname').touched) ? 'warn' : 'primary'}}">
+              <input mdInput formControlName="lastname" placeholder="Last Name" type="text" required>
+            </md-input-container>
+          </p>
+          <p>
+            <md-input-container class="half-width"
+             dividerColor="{{(feedbackForm.get('telnum').hasError('required') && feedbackForm.get('telnum').touched) ? 'warn' : 'primary'}}">
+              <input mdInput formControlName="telnum" placeholder="Tel. Number" type="tel" required>
+              <md-hint>
+                <span [hidden]="!(feedbackForm.get('telnum').hasError('required') && feedbackForm.get('telnum').touched)">
+                 Phone Number is required </span>
+              </md-hint>
+            </md-input-container>
+            <md-input-container class="half-width"
+             dividerColor="{{(feedbackForm.get('email').hasError('required') && feedbackForm.get('email').touched) ? 'warn' : 'primary'}}">
+              <input mdInput formControlName="email" placeholder="Email" type="email" required>
+              <md-hint>
+                <span [hidden]="!(feedbackForm.get('email').hasError('required') && feedbackForm.get('email').touched)">
+                  Email ID is required </span>
+              </md-hint>
+            </md-input-container>
+          </p>
+          <table class="form-size">
+            <td>
+              <md-select placeholder="How?" formControlName="contacttype">
+              <md-option *ngFor="let ctype of contactType" [value]="ctype">
+                {{ ctype }}
+              </md-option>
+            </md-select>
+            </td>
+            </table>
+          <p>
+            <md-input-container class="full-width">
+              <textarea mdInput formControlName="message" placeholder="Your Feedback" rows=12></textarea>
+            </md-input-container>
+          </p>
+          <button type="submit" md-button class="background-primary text-floral-white" [disabled]="feedbackForm.invalid">Send</button>
+        </form>
+      </div>
+</div>

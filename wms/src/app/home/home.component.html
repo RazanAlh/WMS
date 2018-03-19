@@ -1,0 +1,31 @@
+<div class="container"
+     fxLayout="row"
+     fxLayout.sm="row"
+     fxLayout.xs="row"
+     fxLayoutAlign.gt-md="space-around center"
+     fxLayoutGap="10px">
+
+    <div *ngIf="workshops" fxFlex fxLayoutGap="25px" fxLayout.sm="column">
+        <md-card *ngFor="let workshop of workshops" fxFlex >
+            <md-card-header>
+            <div md-card-avatar></div>
+            <md-card-title>
+                <h3>{{workshop.name | uppercase}}</h3>
+            </md-card-title>
+            </md-card-header>
+            <div  fxLayoutAlign.gt-sm="center center">
+                <img md-card-image src="{{workshop.image}}" alt={{workshop.name}} class="workshopimg">
+            </div>
+            <md-card-content>
+            <p>{{workshop.description}}</p>
+            </md-card-content>
+        </md-card>
+    </div>
+    <div [hidden]="workshops  || errMess">
+        <md-spinner></md-spinner><h4>Loading . . . Please Wait</h4>
+    </div>
+    <div *ngIf="errMess">
+        <h2>Error</h2>
+        <h4>{{errMess}}</h4>
+     </div>
+</div>

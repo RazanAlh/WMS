@@ -1,0 +1,38 @@
+<div class="container"
+     fxLayout="column"
+     fxLayoutGap="10px">
+
+     <div fxFlex>
+        <h1>WorkshopSurveys</h1>
+        <h1>{{survey.title}}</h1>
+        <p> {{survey.notes}}</p>
+        <div>
+            <md-list>
+                <md-list-item *ngFor="let question of survey.questions">
+                    <p md-line> 
+                        <span> {{question.id}} </span>  -  <span> {{question.question}} </span>
+                        <md-radio-group class="result-radio-group">
+                            <md-radio-button class="result-radio-button" (change)="addquestion($event, question.id)" *ngFor="let result of results" [value]="result.id">
+                              {{result.degree}}
+                            </md-radio-button>
+                        </md-radio-group>
+                    </p>
+                </md-list-item>
+            </md-list>
+        </div>
+        <p>
+            <button md-button class="background-primary text-floral-white" (click)="saveAll()">Save Survey</button>
+        </p>
+    </div>
+    <div fxFlex>
+        <div [hidden]="survey  || errMess">
+            <md-spinner></md-spinner><h4>Loading . . . Please Wait</h4>
+        </div>
+    </div>
+    <div fxFlex>
+        <div *ngIf="errMess">
+            <h2>Error</h2>
+            <h4>{{errMess}}</h4>
+        </div>
+    </div>
+</div>

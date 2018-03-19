@@ -1,0 +1,55 @@
+<div class="container"
+     fxLayout="column"
+     fxLayoutGap="10px">
+
+     <div fxFlex>
+        <h1>WorkshopSurveys</h1>
+        <h1>{{survey.title}}</h1>
+        <p>{{survey.notes}}</p>
+        <form novalidate [formGroup]="surveyForm" (ngSubmit)="saveAll()">
+            <p>
+                <md-input-container class="full-width" dividerColor="{{(surveyformErrors.title) ? 'warn' : 'primary'}}">
+                    <input mdInput formControlName="title" placeholder="enter title" type="text" required>
+                    <md-hint>
+                        <span [hidden]="!(surveyformErrors.title)">{{surveyformErrors.title}}</span>
+                    </md-hint>
+                </md-input-container>
+                <md-input-container class="full-width">
+                    <input mdInput formControlName="notes" placeholder="enter notes" type="text" >
+                </md-input-container>    
+            </p>
+            <div>
+                <md-list>
+                    <md-list-item *ngFor="let question of survey.questions">
+                        <p md-line> <span> {{question.id}} </span>  -  <span> {{question.question}} </span></p>
+                    </md-list-item>
+                </md-list>
+                <form novalidate [formGroup]="questionForm" (ngSubmit)="saveQuestion()">
+                    <p>
+                        <md-input-container class="half-width" dividerColor="{{(formErrors.question) ? 'warn' : 'primary'}}">
+                        <input mdInput formControlName="question" placeholder="question" type="text" required>
+                        <md-hint>
+                            <span [hidden]="!(formErrors.question)">{{formErrors.question}}</span>
+                        </md-hint>
+                        </md-input-container>
+                        <button type="submit" md-button class="background-primary text-floral-white" [disabled]="questionForm.invalid">Save Question</button>
+                    </p>
+                </form>
+            </div>
+            <p>
+                <button type="submit" md-button class="background-primary text-floral-white" [disabled]="surveyForm.invalid">Save Survey</button>
+            </p>
+        </form>
+    </div>
+    <div fxFlex>
+        <div [hidden]="survey  || errMess">
+            <md-spinner></md-spinner><h4>Loading . . . Please Wait</h4>
+        </div>
+    </div>
+    <div fxFlex>
+        <div *ngIf="errMess">
+            <h2>Error</h2>
+            <h4>{{errMess}}</h4>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,58 @@
+<div class="container" 
+     fxLayout="row"
+     fxLayout.sm="column"
+     fxLayout.xs="column"
+     fxLayoutAlign.gt-md="space-around center"
+     fxLayoutGap="10px">
+     <div fxFlex fxLayoutGap="25px" class="center">
+        <md-card *ngIf="users" fxFlex>
+            <md-card-content  class="cert">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <p>{{users.username}}</p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </md-card-content>
+        </md-card>
+    </div>
+
+    <div [hidden]="users  || errMess">
+        <md-spinner></md-spinner><h4>Loading . . . Please Wait</h4>
+    </div>
+
+    <div *ngIf="errMess">
+        <h2>Error</h2>
+        <h4>{{errMess}}</h4>
+    </div>
+  

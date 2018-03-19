@@ -1,0 +1,103 @@
+<div class="container"
+     fxLayout="column"
+     fxLayoutGap="10px">
+     <div fxFlex>
+        <div *ngIf="workshops" fxLayoutGap="25px" fxLayout.sm="column">
+            <md-card *ngFor="let workshop of workshops" fxFlex>
+                <md-card-header>
+                <div md-card-avatar></div>
+                <md-card-title>
+                    <h3>{{workshop.name | uppercase}}</h3>
+                </md-card-title>
+                </md-card-header>
+                <div fxLayoutAlign.gt-sm="center center">
+                    <img md-card-image src="{{workshop.image}}" alt={{workshop.name}} class="workshopimg">
+                </div>
+                <md-card-content>
+                <p>{{workshop.description}}</p>
+                </md-card-content>
+                <md-card-actions>
+                    <button md-raised-button (click)="deleteWorkshop(workshop.id)" color="warn">DELETE</button>
+                    <button md-raised-button [routerLink]="['/managesurveys', workshop.id]" color="primary">Workshop Survey</button>
+                </md-card-actions>
+            </md-card>
+        </div>
+    </div>
+    <div fxFlex>
+        <div [hidden]="workshops  || errMess">
+            <md-spinner></md-spinner><h4>Loading . . . Please Wait</h4>
+        </div>
+    </div>
+    <div fxFlex>
+        <div *ngIf="errMess">
+            <h2>Error</h2>
+            <h4>{{errMess}}</h4>
+        </div>
+    </div>
+
+    <div fxFlex>
+        <div class="form-size">
+            <form novalidate [formGroup]="workshopForm" (ngSubmit)="onSubmit()">
+                <p>
+                <md-input-container class="full-width" dividerColor="{{(formErrors.name) ? 'warn' : 'primary'}}">
+                <input mdInput formControlName="name" placeholder="name" type="text" required>
+                <md-hint>
+                <span [hidden]="!(formErrors.name)">{{formErrors.name}}</span>
+                </md-hint>
+                </md-input-container>
+                </p>
+                <p>
+                <md-input-container class="full-width" dividerColor="{{(formErrors.startdate) ? 'warn' : 'primary'}}">
+                <input mdInput formControlName="startdate" placeholder="startdate" type="date" required>
+                <md-hint>
+                <span [hidden]="!(formErrors.startdate)">{{formErrors.startdate}}</span>
+                </md-hint>
+                </md-input-container>
+                </p>
+                <p>
+                <md-input-container class="full-width" dividerColor="{{(formErrors.enddate) ? 'warn' : 'primary'}}">
+                <input mdInput formControlName="enddate" placeholder="enddate" type="date" required>
+                <md-hint>
+                <span [hidden]="!(formErrors.enddate)">{{formErrors.enddate}}</span>
+                </md-hint>
+                </md-input-container>
+                </p>
+                <p>
+                <md-input-container class="full-width" dividerColor="{{(formErrors.trainer) ? 'warn' : 'primary'}}">
+                <input mdInput formControlName="trainer" placeholder="trainer" type="text" required>
+                <md-hint>
+                <span [hidden]="!(formErrors.trainer)">{{formErrors.trainer}}</span>
+                </md-hint>
+                </md-input-container>
+                </p>
+                <p>
+                <md-input-container class="full-width" dividerColor="{{(formErrors.place) ? 'warn' : 'primary'}}">
+                <input mdInput formControlName="place" placeholder="place" type="text" required>
+                <md-hint>
+                <span [hidden]="!(formErrors.place)">{{formErrors.place}}</span>
+                </md-hint>
+                </md-input-container>
+                </p>
+                <p>
+                <md-input-container class="full-width" dividerColor="{{(formErrors.image) ? 'warn' : 'primary'}}">
+                <input mdInput formControlName="image" placeholder="image" type="text" required>
+                <md-hint>
+                <span [hidden]="!(formErrors.image)">{{formErrors.image}}</span>
+                </md-hint>
+                </md-input-container>
+                </p>
+                <p>
+                <md-input-container class="full-width" dividerColor="{{(formErrors.description) ? 'warn' : 'primary'}}">
+                <input mdInput formControlName="description" placeholder="description" type="textarea" required>
+                <md-hint>
+                <span [hidden]="!(formErrors.description)">{{formErrors.description}}</span>
+                </md-hint>
+                </md-input-container>
+                </p>
+                <p>
+                    <button type="submit" md-button class="background-primary text-floral-white" [disabled]="workshopForm.invalid">Submit</button>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>

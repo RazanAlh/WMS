@@ -1,0 +1,257 @@
+{
+  "users": [
+    {
+      "username": "razan alhaji",
+      "password": "razan",
+      "email": "razan@abegs.org",
+      "mobile": "999999999999999",
+      "workplace": "abegs.org",
+      "id": 1
+    }
+  ],
+  "profiles": [
+    {
+      "id": 0,
+      "userid": 1,
+      "workshops": [
+        1,
+        2,
+        4
+      ],
+      "surveys": [
+        1,
+        2
+      ],
+      "certificates": [
+        1,
+        2
+      ]
+    }
+  ],
+  "workshops": [
+    {
+      "id": 1,
+      "name": "Training Course in Mascut on Ideological Deviation",
+      "startdate": "20 February 2018",
+      "enddate": "22 February 2018",
+      "trainer": "Ideological",
+      "place": "Sultanate of Oman.",
+      "image": "https://www.abegs.org/aportal/rpc/download/AMIfv96I2P_QnK6UJSz9ZR_Ue1bBQpZPca8-bj9mJ1iQT_KGgAkkDx90NjjC1__OoZyL02bFoW-7h8yrTV8JJN7SOq7fiPI98OCqbUNueV9BBpiraurpOxBnI1zMWbKp2CkK0yFqPykHCvCfAQXxVjl-ZY8jcAaHwA",
+      "description": "In the framework of the activities of the Arab Bureau of Education for the Gulf States (ABEGS) and its programs to strengthen the role of families in education, the Bureau is organizing a three-day training course entitled  Ideological Immunization Skills in cooperation with the Ministry of Education in Sultanate of Oman.",
+      "future": "false"
+    },
+    {
+      "id": 2,
+      "name": "Training Course in Mascut on Ideological Deviation",
+      "startdate": "20 February 2018",
+      "enddate": "22 February 2018",
+      "trainer": "Ideological",
+      "place": "Sultanate of Oman.",
+      "image": "https://www.abegs.org/aportal/rpc/download/AMIfv96I2P_QnK6UJSz9ZR_Ue1bBQpZPca8-bj9mJ1iQT_KGgAkkDx90NjjC1__OoZyL02bFoW-7h8yrTV8JJN7SOq7fiPI98OCqbUNueV9BBpiraurpOxBnI1zMWbKp2CkK0yFqPykHCvCfAQXxVjl-ZY8jcAaHwA",
+      "description": "In the framework of the activities of the Arab Bureau of Education for the Gulf States (ABEGS) and its programs to strengthen the role of families in education, the Bureau is organizing a three-day training course entitled  Ideological Immunization Skills in cooperation with the Ministry of Education in Sultanate of Oman.",
+      "future": "false"
+    },
+    {
+      "id": 3,
+      "name": "Training Course in Mascut on Ideological Deviation",
+      "startdate": "20 February 2018",
+      "enddate": "22 February 2018",
+      "trainer": "Ideological",
+      "place": "Sultanate of Oman.",
+      "image": "https://www.abegs.org/aportal/rpc/download/AMIfv96I2P_QnK6UJSz9ZR_Ue1bBQpZPca8-bj9mJ1iQT_KGgAkkDx90NjjC1__OoZyL02bFoW-7h8yrTV8JJN7SOq7fiPI98OCqbUNueV9BBpiraurpOxBnI1zMWbKp2CkK0yFqPykHCvCfAQXxVjl-ZY8jcAaHwA",
+      "description": "In the framework of the activities of the Arab Bureau of Education for the Gulf States (ABEGS) and its programs to strengthen the role of families in education, the Bureau is organizing a three-day training course entitled  Ideological Immunization Skills in cooperation with the Ministry of Education in Sultanate of Oman.",
+      "future": "false"
+    },
+    {
+      "id": 4,
+      "name": "Training Course in Mascut on Ideological Deviation",
+      "startdate": "20 February 2018",
+      "enddate": "22 February 2018",
+      "trainer": "Ideological",
+      "place": "Sultanate of Oman.",
+      "image": "https://www.abegs.org/aportal/rpc/download/AMIfv96I2P_QnK6UJSz9ZR_Ue1bBQpZPca8-bj9mJ1iQT_KGgAkkDx90NjjC1__OoZyL02bFoW-7h8yrTV8JJN7SOq7fiPI98OCqbUNueV9BBpiraurpOxBnI1zMWbKp2CkK0yFqPykHCvCfAQXxVjl-ZY8jcAaHwA",
+      "description": "In the framework of the activities of the Arab Bureau of Education for the Gulf States (ABEGS) and its programs to strengthen the role of families in education, the Bureau is organizing a three-day training course entitled  Ideological Immunization Skills in cooperation with the Ministry of Education in Sultanate of Oman.",
+      "future": "true"
+    },
+    {
+      "name": "ABEGS participates in 5th Islamic Conference of Ministers in Charge of Childhood",
+      "trainer": "H. E. Director-General of the Arab Bureau",
+      "startdate": "2018-03-10",
+      "enddate": "2018-03-13",
+      "place": "Scientific and Cultural Organization (ISESCO)",
+      "image": "https://www.abegs.org/aportal/rpc/download/AMIfv977I-2BkyHi1Cj9azLt7sF8UvxevRFITf1H7poOaG2kw3XzStNsKfYYOogXuyXBL2NxP1Wk9WoDdvBs_EJjIa-EMr08OKxAzfLZqj1e6o45HZftXShAwqaprytbZO3JhXPQmc_atCAABD4CM7zKQ5bCs7CHbA",
+      "description": "H. E. Director-General of the Arab Bureau of Education for the Gulf States Dr. Ali Al karni participated in the 5th Islamic Conference of Ministers in Charge of Childhood “Towards a Safe Childhood“ held by the Islamic Educational, Scientific and Cultural Organization (ISESCO) on 21-22 February 2018 in Rabat, Morocco to explore measures to ensure a better and safer childhood in the Islamic world..",
+      "id": 5,
+      "future": "true"
+    },
+    {
+      "name": "aaaaaaqqqqq",
+      "trainer": "aaaaa aaaa ",
+      "startdate": "2018-03-01",
+      "enddate": "2018-03-31",
+      "place": "aaaa aaaa",
+      "image": "https://www.abegs.org/aportal/rpc/download/AMIfv977I-2BkyHi1Cj9azLt7sF8UvxevRFITf1H7poOaG2kw3XzStNsKfYYOogXuyXBL2NxP1Wk9WoDdvBs_EJjIa-EMr08OKxAzfLZqj1e6o45HZftXShAwqaprytbZO3JhXPQmc_atCAABD4CM7zKQ5bCs7CHbA",
+      "description": "aaaa aaaa aaaa aaaa aaaa aaaa",
+      "future": true,
+      "id": 9
+    }
+  ],
+  "surveys": [
+    {
+      "id": 0,
+      "workshopid": 0,
+      "title": "surveys1",
+      "notes": "notes",
+      "questions": [
+        {
+          "id": 1,
+          "question": "question#1"
+        },
+        {
+          "id": 2,
+          "question": "question#2"
+        },
+        {
+          "id": 3,
+          "question": "question#3"
+        },
+        {
+          "question": "question#4",
+          "id": 4
+        },
+        {
+          "question": "question#5",
+          "id": 5
+        }
+      ]
+    },
+    {
+      "workshopid": 4,
+      "title": "Work shop Surveys num # 4",
+      "notes": "",
+      "questions": [
+        {
+          "question": "adasdadasdasdasd",
+          "id": 1
+        },
+        {
+          "question": "dadasdasdasdasd",
+          "id": 2
+        },
+        {
+          "question": "dasdasdasdasdasdasd",
+          "id": 3
+        },
+        {
+          "question": "444444444444444",
+          "id": 4
+        },
+        {
+          "question": "wwwwwwwwwwwwww",
+          "id": 5
+        }
+      ],
+      "id": 1
+    },
+    {
+      "workshopid": 9,
+      "title": "Work shop Surveys num # 9",
+      "notes": "",
+      "questions": [],
+      "id": 2
+    },
+    {
+      "workshopid": 5,
+      "title": "Work shop Surveys num # 5",
+      "notes": "",
+      "questions": [],
+      "id": 3
+    }
+  ],
+  "surveyresults": [
+    {
+      "id": 0,
+      "surveyid": 0,
+      "userid": 0,
+      "results": [
+        {
+          "questionid": 1,
+          "result": 1
+        },
+        {
+          "questionid": 2,
+          "result": 4
+        },
+        {
+          "questionid": 3,
+          "result": 5
+        }
+      ],
+      "notes": "notes"
+    },
+    {
+      "surveyid": 1,
+      "userid": "1",
+      "results": [
+        {
+          "questionid": 1,
+          "result": 1
+        },
+        {
+          "questionid": 2,
+          "result": 2
+        },
+        {
+          "questionid": 4,
+          "result": 3
+        },
+        {
+          "questionid": 5,
+          "result": 4
+        },
+        {
+          "questionid": 3,
+          "result": 2
+        }
+      ],
+      "id": 1
+    }
+  ],
+  "certificates": [
+    {
+      "id": 0,
+      "workshopid": 0,
+      "userid": 0,
+      "notes": "notes"
+    }
+  ],
+  "feedback": [
+    {
+      "id": 1,
+      "name": "aaaaaaqqqqq",
+      "telnum": "aaaaaaaaa",
+      "email": "aa@aa.aa",
+      "message": "aaaaa"
+    },
+    {
+      "firstname": "aaaaaaqqqqq",
+      "lastname": "aaaaaaaaa",
+      "telnum": "9999999",
+      "email": "999999",
+      "agree": false,
+      "contacttype": "Tel",
+      "message": "aaaaaaaaaaaaaa",
+      "id": 2
+    },
+    {
+      "firstname": "aaaaaaqqqqq",
+      "lastname": "aaaaaaaaa",
+      "telnum": "8888888",
+      "email": "aaa@aaaa.aaaa",
+      "agree": false,
+      "contacttype": "Tel",
+      "message": "aaaaaaaaa",
+      "id": 3
+    }
+  ]
+}

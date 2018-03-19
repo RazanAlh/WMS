@@ -1,0 +1,1 @@
+export const Result = [{id:1, degree:'Poor'}, {id:2, degree:'Average'}, {id:3, degree:'Good'}, {id:4, degree:'Very Good'}, {id:5, degree:'Excellent'}];
